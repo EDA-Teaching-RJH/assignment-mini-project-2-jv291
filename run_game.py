@@ -7,7 +7,7 @@ def run_game(game):
     while True:
         guess = input("Enter your guess: ")
         if game.guess_word(guess):
-            print(f"Congractulations! You have guesses the word '{game.current_word}' in {game.attempt} attempts.")
+            print(f"Congractulations! You have guesses the word '{game.current_word}' in {game.attempts} attempts.")
             break
         else:
             print("Incorrect guess. Try again.")
@@ -17,4 +17,3 @@ if __name__ == "__main__":
     words = load_words('words.txt')
     game = ExtendedWordGame(words)
     run_game(game)
-    
